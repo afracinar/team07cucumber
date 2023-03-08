@@ -17,7 +17,7 @@ public class Hooks {
     @After
     public void hooks(Scenario scenario){
           if (scenario.isFailed()){
-                 byte [] failedScreenshot =((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+              final byte [] failedScreenshot =((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
 
 
           }
