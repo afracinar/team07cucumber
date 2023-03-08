@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
                 "json:target/json-reports/cucumber.json", //json raporu üzerine çift tıklayıp açılır
                 "junit:target/xml-report/cucumber.xlm", //junit raporu üzerine çift tıklayıp açılır
                 "rerun:target/failed_scenarios.txt",
-                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" //spark raporu için
         },
         monochrome = true, //concole'daki bilgilerin okunaklı olmasını sağlar
         features = "/.src/test/resources/features",//features folder path
@@ -21,6 +21,5 @@ import org.junit.runner.RunWith;
         dryRun = false
 
 )
-
 public class Runner {
 }
