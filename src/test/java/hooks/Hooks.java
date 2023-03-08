@@ -16,9 +16,10 @@ public class Hooks {
 
     @After
     public void hooks(Scenario scenario){
-          if (scenario.isFailed()){
-                 byte [] failedScreenshot =((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
-
+          if (scenario.isFailed()){                          //BYTES dememizin nedeni rapora küçük küçük birimler halinde eklendiği için
+               final byte [] failedScreenshot =((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+              scenario.attach(failedScreenshot, "image/png", "failed_scenario" + scenario.getName());
+              Driver.closeDriver();
 
           }
     }
