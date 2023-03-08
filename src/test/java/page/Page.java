@@ -9,5 +9,14 @@ public class Page {
 
 
         // geliyorumu yazdiklarim ben kemal geliyorum
+
+
+
+
+
+
+        String merhaba = "merhaba";
+        System.out.println(merhaba);
+
     }
 }
