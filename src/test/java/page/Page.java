@@ -8,6 +8,6 @@ public class Page {
 
 
 
-        //// geliyorumu yazdiklarim ben kemal geliyorum
+        // geliyorumu yazdiklarim ben kemal geliyorum
     }
 }
