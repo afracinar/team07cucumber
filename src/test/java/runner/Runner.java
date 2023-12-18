@@ -7,19 +7,19 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {
-                "pretty", //raporların daha okunaklı olması için eklenir
-                "html:target/default-cucumber-reports.html", //html raporu browser da açılır.sağ tık yapıp open in dememiz lazım
-                "json:target/json-reports/cucumber.json", //json raporu üzerine çift tıklayıp açılır
-                "junit:target/xml-report/cucumber.xlm", //junit raporu üzerine çift tıklayıp açılır
+                "pretty", //raporlarin daha okunakli olmasi icin
+                "html:target/default-cucumber-reports.html",
+                "json:target/json-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml",
                 "rerun:target/failed_scenarios.txt",
-                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" //spark raporu için
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
-        monochrome = true, //concole'daki bilgilerin okunaklı olmasını sağlar
-        features = "/.src/test/resources/features",//features folder path
-        glue = {"stepdefinitions" ,"hooks"},//stepdefinitions path
-        tags = "",
-        dryRun = false
+        monochrome=true, //raporlarin konsolda okunakli sekilde cikmasi icin
 
+        features = "./src/test/resources/features", //features folder path
+        glue = {"stepdefinition","hooks"},    //stepdefinitions path
+        tags = "@n11",
+        dryRun = false
 )
 public class Runner {
 }
